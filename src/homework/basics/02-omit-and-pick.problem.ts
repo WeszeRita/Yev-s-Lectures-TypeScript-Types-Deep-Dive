@@ -9,7 +9,8 @@ interface User {
 /*
  * TODO: create a new object type with only the firstName and lastName properties of User.
  */
-type MyType = unknown;
+type MyType2 = Omit<User, 'id'>;
+type MyType = Pick<User, 'lastName' | 'firstName'>;
 
 
 /* Test the result */

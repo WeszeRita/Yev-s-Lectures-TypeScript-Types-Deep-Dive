@@ -7,9 +7,9 @@ import { Equal, Expect } from '../../../helpers';
  *
  * Example: string, TypeError -> { data: string; error: TypeError }.
  */
-type CreateDataShape = {
-  data: unknown;
-  error: unknown;
+type CreateDataShape<T, E> = {
+  data: T;
+  error: E;
 };
 
 

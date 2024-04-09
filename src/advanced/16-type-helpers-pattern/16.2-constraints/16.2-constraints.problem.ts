@@ -6,7 +6,7 @@ import { Equal, Expect } from '../../../helpers';
  *
  * Example: 'products' -> '/products'.
  */
-type AddRoutePrefix<TRoute> = `/${TRoute}`;
+type AddRoutePrefix<TRoute extends string> = `/${TRoute}`;
 
 
 /* Test the result */

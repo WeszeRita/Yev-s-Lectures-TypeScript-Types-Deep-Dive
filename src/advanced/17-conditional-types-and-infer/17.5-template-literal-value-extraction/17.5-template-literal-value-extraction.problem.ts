@@ -11,7 +11,9 @@ type Names = [
 /*
  * TODO: Extract a surname of passed name.
  */
-type GetSurname = unknown;
+type GetSurname<T> = T extends `${ infer F } ${ infer L }`
+  ? L
+  : never;
 
 
 /* Test the result */

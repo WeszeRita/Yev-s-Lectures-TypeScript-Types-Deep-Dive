@@ -4,7 +4,7 @@ import { Equal, Expect } from '../../../helpers';
  * TODO: Fix the problem of passing types.
  *  We should return the same type as we passed to the input.
  */
-type ReturnWhatIPassIn = unknown;
+type ReturnWhatIPassIn<T> = T;
 
 
 /* Test the result */

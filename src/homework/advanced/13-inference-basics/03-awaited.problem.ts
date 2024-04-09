@@ -11,7 +11,7 @@ const getUser = () => {
 /*
  * TODO: Fix the extracting the user interface from the getUser() function return type.
  */
-type ReturnValue = ReturnType<typeof getUser>;
+type ReturnValue = Awaited<ReturnType<typeof getUser>>;
 
 
 /* Test the result */

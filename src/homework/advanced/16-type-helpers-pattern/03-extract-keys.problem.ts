@@ -9,7 +9,7 @@ interface User {
 /*
  * TODO: Extract all fields of the input interface.
  */
-type ExtractFields<T> = unknown;
+type ExtractFields<T> = keyof User;
 
 
 /* Test the result */

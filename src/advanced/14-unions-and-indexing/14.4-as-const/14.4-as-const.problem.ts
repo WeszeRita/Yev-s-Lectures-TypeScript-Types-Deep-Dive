@@ -10,7 +10,7 @@ const programModeEnumMap = {
   SELF_DIRECTED: 'selfDirected',
   PLANNED_ONE_ON_ONE: 'planned1on1',
   PLANNED_SELF_DIRECTED: 'plannedSelfDirected',
-};
+} as const;
 
 type GroupProgram = typeof programModeEnumMap['GROUP'];
 type AnnouncementProgram = typeof programModeEnumMap['ANNOUNCEMENT'];

@@ -8,8 +8,8 @@ interface User {
  * TODO: Fix the type errors inside the createThenGetUser() function.
  */
 const createThenGetUser = async (
-  createUser: unknown,
-  getUser: unknown,
+  createUser: () => Promise<string>,
+  getUser: (id: string) => Promise<User>,
 ): Promise<User> => {
   const userId: string = await createUser();
 

@@ -2,7 +2,7 @@
  * TODO: Constraint the Maybe type by excluding passing
  *  `null` and `undefined` types.
  */
-export type Maybe<T> = T | null | undefined;
+export type Maybe<T extends {}> = T;
 
 
 /* Test the result */

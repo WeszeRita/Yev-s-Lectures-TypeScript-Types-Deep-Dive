@@ -17,7 +17,9 @@ type Example = MyComplexInterface<
 /*
  * TODO: Extract the passed Point type from the getPoint() method.
  */
-type GetPoint<T> = unknown;
+type GetPoint<T> = T extends MyComplexInterface<any, any, any, any>
+  ? ReturnType<T['getPoint']>
+  : never;
 
 
 /* Test the result */

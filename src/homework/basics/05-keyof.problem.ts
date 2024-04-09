@@ -9,7 +9,7 @@ interface User {
 /*
  * TODO: Extract all keys of the User interface.
  */
-type UserFieldType = unknown;
+type UserFieldType = keyof User;
 
 
 /* Test the result */

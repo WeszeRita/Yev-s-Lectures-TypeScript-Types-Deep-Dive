@@ -15,7 +15,7 @@ const testingFrameworks = {
   },
 };
 
-type TestingFramework = unknown;
+type TestingFramework = keyof typeof testingFrameworks;
 
 
 /* Test the result */

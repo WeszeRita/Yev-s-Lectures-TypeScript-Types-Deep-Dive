@@ -14,7 +14,12 @@ interface Post {
  * TODO: Type this return statement, so it's both
  * User AND posts field
  */
-const getDefaultUserAndPosts = (): unknown => {
+interface userAndPosts extends User {
+  posts: Post[];
+}
+
+
+const getDefaultUserAndPosts = (): userAndPosts => {
   return {
     id: '1',
     firstName: 'Oliver',

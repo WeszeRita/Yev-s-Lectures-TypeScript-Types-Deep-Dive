@@ -8,7 +8,7 @@ export type Event =
   | { type: 'focus'; event: FocusEvent; }
   | { type: 'keydown'; event: KeyboardEvent; };
 
-type EventType = unknown;
+type EventType = Event['type'];
 
 
 /* Test the result */

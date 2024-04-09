@@ -7,7 +7,9 @@ import { Equal, Expect } from '../../../helpers';
  */
 type TemplateLiteralKey = `${ 'user' | 'post' | 'comment' }${ 'Id' | 'Name' }`;
 
-type ObjectOfKeys = unknown;
+type ObjectOfKeys = {
+  [key in TemplateLiteralKey]: string;
+};
 
 
 /* Test the result */

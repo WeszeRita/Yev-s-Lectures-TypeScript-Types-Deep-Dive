@@ -14,7 +14,7 @@ const makeQuery = (
 /*
  * TODO: Extract the type of makeQuery() function parameters.
  */
-type MakeQueryParameters = unknown;
+type MakeQueryParameters = Parameters<typeof makeQuery>;
 
 
 /* Test the result */
