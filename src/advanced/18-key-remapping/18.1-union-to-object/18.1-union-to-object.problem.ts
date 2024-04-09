@@ -5,7 +5,9 @@ type Route = '/' | '/about' | '/admin' | '/admin/users';
 /*
  * TODO: Convert the Route union type to the object type.
  */
-type RoutesObject = unknown;
+type RoutesObject = {
+  [key in Route]: key;
+};
 
 
 /* Test the result */

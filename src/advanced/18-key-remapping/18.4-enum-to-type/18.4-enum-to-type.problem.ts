@@ -9,7 +9,7 @@ enum UserRole {
 /*
  * TODO: Convert enum to type.
  */
-type UserRoleType = unknown;
+type UserRoleType = `${ UserRole }`;
 
 
 /* Test the result */

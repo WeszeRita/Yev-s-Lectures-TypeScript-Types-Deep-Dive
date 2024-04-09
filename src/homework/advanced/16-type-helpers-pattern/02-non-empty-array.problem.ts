@@ -1,7 +1,7 @@
 /*
  * TODO: Declare a type that will check that arrays are not empty.
  */
-type NonEmptyArray = unknown;
+type NonEmptyArray<T> = [T, ...T[]];
 
 /*
  * Some article that might help you!

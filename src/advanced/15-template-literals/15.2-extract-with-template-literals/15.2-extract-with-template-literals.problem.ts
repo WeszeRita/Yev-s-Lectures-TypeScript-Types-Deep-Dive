@@ -5,7 +5,7 @@ import { Equal, Expect } from '../../../helpers';
  */
 type Routes = '/users' | '/users/:id' | '/posts' | '/posts/:id';
 
-type DynamicRoutes = unknown;
+type DynamicRoutes = Extract<Routes, `${ string }/:${ string }`>;
 
 
 /* Test the result */

@@ -13,7 +13,12 @@ const parser3 = {
 /*
  * TODO: Extract the returning value types from different parsers.
  */
-type GetParserResult<T> = unknown;
+
+// type GetParserResult<T> = T extends () => any
+//   ? ReturnType<T>
+//   : never;
+
+type GetParserResult<F> = ReturnType<typeof F>
 
 
 /* Test the result */

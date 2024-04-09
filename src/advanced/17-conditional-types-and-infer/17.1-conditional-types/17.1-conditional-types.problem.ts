@@ -5,7 +5,7 @@ import { Equal, Expect } from '../../../helpers';
  *  'hello' -> 'goodbye'
  *  'goodbye' -> 'hello'
  */
-type YouSayGoodbyeAndISayHello = unknown;
+type YouSayGoodbyeAndISayHello<T> = T extends 'hello' ? 'goodbye' : 'hello';
 
 
 /* Test the result */

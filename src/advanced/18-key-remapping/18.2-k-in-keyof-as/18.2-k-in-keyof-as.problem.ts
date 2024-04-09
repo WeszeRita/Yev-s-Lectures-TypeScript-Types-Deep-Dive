@@ -12,7 +12,9 @@ interface Attributes {
  *
  * Example: { field: someType } -> { getField: () => someType }
  */
-type AttributeGetters = unknown;
+type AttributeGetters = {
+  [Key in (keyof Attributes) as `get${ Capitalize<Key> }`]: () => Attributes[Key];
+};
 
 
 /* Test the result */

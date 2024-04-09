@@ -5,7 +5,7 @@ import { Equal, Expect } from '../../../helpers';
  *  by setting the `error` type to `undefined` as the default
  *  if the TError type was not passed.
  */
-type CreateDataShape<TData, TError> = {
+type CreateDataShape<TData, TError=undefined> = {
   data: TData;
   error: TError;
 };

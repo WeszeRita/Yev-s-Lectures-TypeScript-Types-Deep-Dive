@@ -11,7 +11,9 @@ interface Attributes {
  *
  * Example: { field: someType } -> { field: () => someType }
  */
-type AttributeGetters = unknown;
+type AttributeGetters = {
+  [Key in (keyof Attributes)]: () => Attributes[Key];
+};
 
 
 /* Test the result */

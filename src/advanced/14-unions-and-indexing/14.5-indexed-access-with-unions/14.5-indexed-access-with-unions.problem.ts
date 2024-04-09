@@ -12,7 +12,7 @@ const programModeEnumMap = {
   PLANNED_SELF_DIRECTED: 'plannedSelfDirected',
 } as const;
 
-type IndividualProgram = unknown;
+type IndividualProgram = typeof programModeEnumMap['ONE_ON_ONE' | 'SELF_DIRECTED' | 'PLANNED_ONE_ON_ONE' | 'PLANNED_SELF_DIRECTED'];
 
 
 /* Test the result */

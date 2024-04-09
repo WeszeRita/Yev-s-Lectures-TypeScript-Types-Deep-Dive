@@ -7,7 +7,7 @@ const myFunc = () => {
 /*
  * TODO: Extract the myFunc() function return type.
  */
-type MyFuncReturn = unknown;
+type MyFuncReturn = ReturnType<typeof  myFunc>;
 
 
 /* Test the result */

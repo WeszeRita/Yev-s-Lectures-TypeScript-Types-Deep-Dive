@@ -9,7 +9,7 @@ const frontendToBackendEnumMap = {
 /*
  * TODO: Extract values from the frontendToBackendEnumMap object.
  */
-type BackendModuleEnum = unknown;
+type BackendModuleEnum = typeof frontendToBackendEnumMap['singleModule' | 'multiModule' | 'sharedModule'];
 
 
 /* Test the result */

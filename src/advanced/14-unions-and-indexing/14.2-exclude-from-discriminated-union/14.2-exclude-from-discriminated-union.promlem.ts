@@ -8,7 +8,7 @@ export type Event =
   | { type: 'focus'; event: FocusEvent; }
   | { type: 'keydown'; event: KeyboardEvent; };
 
-type NonKeyDownEvents = unknown;
+type NonKeyDownEvents = Exclude<Event, { type: 'keydown' }>;
 
 
 /* Test the result */

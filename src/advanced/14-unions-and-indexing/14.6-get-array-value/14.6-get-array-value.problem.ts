@@ -3,10 +3,10 @@ import { Equal, Expect } from '../../../helpers';
 /*
  * TODO: Get fruits from array.
  */
-const fruits = ['apple', 'banana', 'orange'];
+const fruits = ['apple', 'banana', 'orange'] as const;
 
-type AppleOrBanana = unknown;
-type Fruit = unknown;
+type AppleOrBanana = typeof fruits[0 | 1];
+type Fruit = typeof fruits[number];
 
 
 /* Test the result */

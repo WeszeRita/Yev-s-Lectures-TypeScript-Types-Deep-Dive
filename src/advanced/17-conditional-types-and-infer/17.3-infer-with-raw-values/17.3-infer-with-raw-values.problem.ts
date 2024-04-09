@@ -3,7 +3,7 @@ import { Equal, Expect } from '../../../helpers';
 /*
  * TODO: Extract the `data` type from the passed object.
  */
-type GetDataValue<T> = unknown;
+type GetDataValue<T> = T extends { data: any } ? T['data'] : never;
 
 
 /* Test the result */

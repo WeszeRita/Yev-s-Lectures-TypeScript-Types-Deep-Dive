@@ -7,7 +7,7 @@ import { Equal, Expect } from '../../../helpers';
  */
 type Event = `log_in` | 'log_out' | 'sign_up';
 
-type ObjectOfKeys = unknown;
+type ObjectOfKeys = Record<Uppercase<Event>, string>;
 
 type tests = [
   Expect<

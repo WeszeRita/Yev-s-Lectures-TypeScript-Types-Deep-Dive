@@ -7,7 +7,7 @@ type Filling = 'cheese' | 'ham' | 'salami';
 /*
  * TODO: Create different variations of BreadType and Filling type unions.
  */
-type Sandwich = unknown;
+type Sandwich = `${ BreadType } sandwich with ${ Filling }`;
 
 
 /* Test the result */

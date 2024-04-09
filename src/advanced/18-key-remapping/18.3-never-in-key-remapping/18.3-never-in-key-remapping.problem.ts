@@ -11,7 +11,9 @@ interface Example {
 /*
  * TODO: Extract all interface fields that have id substring to a new one.
  */
-type OnlyIdKeys<T> = unknown;
+type OnlyIdKeys<T> = {
+  [Key in (keyof T) as Key extends `${ string }${ 'id' | 'Id' }` ? Key : never]: T[Key];
+};
 
 
 /* Test the result */

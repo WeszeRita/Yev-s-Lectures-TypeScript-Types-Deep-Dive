@@ -8,7 +8,7 @@ export type Event =
   | { type: 'focus'; event: FocusEvent; }
   | { type: 'keydown'; event: KeyboardEvent; };
 
-type ClickEvent = unknown;
+type ClickEvent = Extract<Event, { type: 'click'}>;
 
 
 /* Test the result */

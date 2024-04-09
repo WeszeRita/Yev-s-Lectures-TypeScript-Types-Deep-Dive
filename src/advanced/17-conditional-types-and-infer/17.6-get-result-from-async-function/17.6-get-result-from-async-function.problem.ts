@@ -14,8 +14,10 @@ const getServerSideProps = async () => {
 /*
  * TODO: Extract the `props` type from the getServerSideProps() function return type.
  */
-type InferPropsFromServerSideFunction = unknown;
-
+type InferPropsFromServerSideFunction <TFunction> =
+  TFunction extends (...args: any) => Promise<{ props: infer TProps }>
+  ? TProps
+  : never;
 
 /* Test the result */
 type tests = [

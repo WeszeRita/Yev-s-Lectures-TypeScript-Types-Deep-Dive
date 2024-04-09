@@ -4,7 +4,7 @@ import { Equal, Expect } from '../../../helpers';
  * TODO: Declare a type that will extend the input type
  *  by having also null or undefined.
  */
-type Maybe = unknown;
+type Maybe<T> = T | null | undefined;
 
 
 /* Test the result */

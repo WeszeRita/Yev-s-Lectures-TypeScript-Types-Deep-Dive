@@ -4,9 +4,9 @@ import { Equal, Expect } from '../../../helpers';
  * TODO: Fix a problem with extracting function parameter and return types
  *  with the next grouping them into a new model.
  */
-type GetParametersAndReturnType<T> = {
-  params: Parameters<T>;
-  returnValue: ReturnType<T>;
+type GetParametersAndReturnType<P extends (...args: any) => any> = {
+  params: Parameters<P>;
+  returnValue: ReturnType<P>;
 };
 
 
