@@ -15,10 +15,6 @@ const parser3 = {
  */
 type GetParserResult<Fn> = ReturnType<typeof Fn>
 
-// type GetParserResult2<T> = T extends () => any
-//   ? ReturnType<T>
-//   : never;
-
 /* Test the result */
 type tests = [
   Expect<
